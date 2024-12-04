@@ -23,8 +23,8 @@ def sent_analyzer():
                     "dominant_emotion": response['dominant_emotion']}
 
     # Check if an error or invalid input ocurred
-    if response_dict["anger"] is None:
-        return "Invalid input! Try again."
+    if response_dict["dominant_emotion"] is None:
+        return "Invalid text! Please try again!"
     else:
         # Exclude the 'dominant_emotion' key
         emotions = {k: v for k, v in response_dict.items() if k != 'dominant_emotion'}
